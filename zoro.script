@@ -1,4 +1,4 @@
-image = Image("media/zoro.jpg");
+image = Image("/media/zoro.png");
 
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
 pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
