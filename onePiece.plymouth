@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=One Piece
+Description=This is a plymouth theme which runs One Piece gif
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/plymouth-onePiece
+ScriptFile=/usr/share/plymouth/themes/plymouth/onePiece.script
