@@ -74,7 +74,7 @@ sudo plymouth quit
 ```
 sudo cp -r ~/path/to/plymouth /usr/share/plymouth/themes
 ```
-3. **Run the test-script**
+3. **Run the test-script** or run ``` sudo plymouthd ; sudo plymouth --show-splash ; sleep 10 ; sudo killall plymouthd ```
 
 Make the script executable and run it:
 
