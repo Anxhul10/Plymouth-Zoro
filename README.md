@@ -20,7 +20,7 @@ If you want to install this on < Ubuntu 16.04, change the path from /usr/share/p
 
 ### METHOD 1
 
-1. **clone this repo at /ust/share/plymouth/themes**
+1. **clone this repository at /ust/share/plymouth/themes**
 
 ```
 sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
