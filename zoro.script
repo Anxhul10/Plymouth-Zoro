@@ -1,4 +1,3 @@
-// 0 - 371
 for(i = 0; i <= 371; i++)
   one_piece_image_arr[i] = Image("/media/740af368-d542-4bb1-bd29-e22ceb8c8b72-"+i+".png");
 
