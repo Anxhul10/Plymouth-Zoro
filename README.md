@@ -1,126 +1,125 @@
-# OnePiece Plymouth Theme
+## Installation On Ubuntu
 
-## Installation on Ubuntu
+Install the theme.
 
-Install the theme:
+    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120
 
-    sudo update-alternatives --install \
-      /usr/share/plymouth/themes/default.plymouth \
-      default.plymouth \
-      /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth \
-      120
-
-Select the default theme:
+Select the default theme.
 
     sudo update-alternatives --config default.plymouth
 
-Update the initramfs image:
+Update the initramfs image.
 
     sudo update-initramfs -u
 
 Now reboot.
 
-Note: If you want to install this on Ubuntu versions older than 16.04,
-change the path from /usr/share/plymouth to /lib/plymouth. Update the
-path inside the `onePiece-plymouth.plymouth` file as well.
-
----
+If you want to install this on < Ubuntu 16.04, change the path from /usr/share/plymouth to /lib/plymouth/ . You need to do this on the PlymouthTheme-Cat.plymouth file also.
 
 ## Development
 
-### Method 1
+### METHOD 1
 
-1. Clone this repository into `/usr/share/plymouth/themes`:
+1. **clone this repo at /ust/share/plymouth/themes**
 
-    sudo git clone <https://github.com/Anxhul10/onePiece-plymouth.git>
+```
+sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
+```
 
-1. Add the theme to `default.plymouth`:
+2. **add the theme to the default.plymouth**
 
-    sudo update-alternatives --install \
-      /usr/share/plymouth/themes/default.plymouth \
-      default.plymouth \
-      /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth \
-      120
+```
+ sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120```
+```
 
-1. Select the theme:
+sudo update-alternatives --config default.plymouth
 
-    sudo update-alternatives --config default.plymouth
+```
+#### OUTPUT
+```bash 
+There are 4 choices for the alternative default.plymouth (providing /usr/share/plymouth/themes/default.plymouth).
 
-#### Example output
+  Selection    Path                                                                     Priority   Status
+------------------------------------------------------------
+  0           /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth   120       auto mode
+  1           /usr/share/plymouth/themes/bgrt/bgrt.plymouth                             100       manual mode
+* 2           /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth   120       manual mode
+  3           /usr/share/plymouth/themes/spinner/spinner.plymouth                       70        manual mode
 
-    There are 4 choices for the alternative default.plymouth
-    (providing /usr/share/plymouth/themes/default.plymouth).
+Press <enter> to keep the current choice[*], or type selection number: ^C
 
-      Selection    Path
-      Priority   Status
-    ------------------------------------------------------------
-      0           /usr/share/plymouth/themes/onePiece-plymouth/
-                  onePiece-plymouth.plymouth   120       auto mode
-      1           /usr/share/plymouth/themes/bgrt/bgrt.plymouth
-                  100       manual mode
-    * 2           /usr/share/plymouth/themes/onePiece-plymouth/
-                  onePiece-plymouth.plymouth   120       manual mode
-      3           /usr/share/plymouth/themes/spinner/spinner.plymouth
-                  70        manual mode
+```
 
-    Press <enter> to keep the current choice[*], or type selection number:
+and build a new initramfs to apply the changes
 
-Build a new initramfs to apply the changes:
+```bash
+sudo update-initramfs -u -k all
+```
 
-    sudo update-initramfs -u -k all
+⚠️ Plymouth draws over your desktop. Please note that you will need Terminal 2 on a different workspace to close Plymouth. ⚠️
 
-NOTE: Plymouth draws over the desktop. Keep another terminal (TTY2)
-open to stop Plymouth when testing.
+#### Terminal 1
 
-#### Terminal 1 — Tab 1: Start Plymouth daemon
+##### Tab 1
 
-    sudo plymouthd --no-daemon --debug
+**Start Plymouth daemon**
 
-#### Terminal 1 — Tab 2: Show splash
+```bash
+sudo plymouthd --no-daemon --debug
+```
 
-    sudo plymouth show-splash
+##### Tab 2
 
-Note: This will take over your screen and prevent running other apps
-until Plymouth is stopped. To exit, press Ctrl+Alt+F3 to switch to a
-virtual terminal, then run the command below. To return to the GUI,
-press Ctrl+Alt+F2.
+**Show splash**
 
-#### Terminal 2: Stop Plymouth when finished
+```bash
+sudo plymouth show-splash
+```
 
-    sudo plymouth quit
+> [!NOTE]
+> This will take over your screen and prevent you from running other apps until Plymouth is stopped.
+> To exit, press Ctrl + Alt + F3 to switch to a virtual terminal, then run the command below.
+> And to exit virtual terminal use Ctrl + Alt + F2
 
----
+#### Terminal 2
 
-### Method 2
+With this terminal you can test the following modes and user interactions.
+When you're done, you can close Plymouth
 
-1. Copy the Plymouth theme to `/usr/share/plymouth/themes`:
+```bash
+sudo plymouth quit
+```
 
-    sudo cp -r ~/path/to/plymouth /usr/share/plymouth/themes
+## METHOD 2
 
-1. Run the test commands:
+1. **COPY PLYMOUTH TO /usr/share/plymouth/themes**
 
-    sudo plymouthd
-    sudo plymouth --show-splash
-    sleep 10
-    sudo killall plymouthd
+```
+sudo cp -r ~/path/to/plymouth /usr/share/plymouth/themes
+```
 
-Or make the script executable and run it:
+3. **Run the test-script** or run ``` sudo plymouthd ; sudo plymouth --show-splash ; sleep 10 ; sudo killall plymouthd ```
 
-    chmod +x run-plymouth-test.sh
-    ./run-plymouth-test.sh
+Make the script executable and run it:
 
-Note: This will take over your screen while running. Use Ctrl+Alt+F3
-to switch to a virtual terminal. To return to your graphical session,
-use Ctrl+Alt+F2 (or whichever F-key your distro uses).
+```bash
+chmod +x run-plymouth-test.sh
+./run-plymouth-test.sh
+```
 
----
+> [!NOTE]
+> This will take over your screen while running. To switch to a virtual terminal use `Ctrl+Alt+F3`. To return to your graphical session use `Ctrl+Alt+F2` (or the > F1–F7 key your distro uses).
 
-## Example
+# Example
 
-1. Change directory:
+1. **Change directory**
 
-    cd /usr/share/plymouth/themes
+```bash
+cd /usr/share/plymouth/themes
+```
 
-1. Copy theme:
+2. **Copy theme**
 
-    sudo cp -r ~/CodeVault/github/onePiece-plymouth .
+```bash
+sudo cp -r ~/CodeVault/github/onePiece-plymouth .
+```
