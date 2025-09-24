@@ -1,4 +1,4 @@
-image = Image("/media/frame_000_delay-0.02s.png");
+image = Image("/media/740af368-d542-4bb1-bd29-e22ceb8c8b72-0.png");
 
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
 pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
