@@ -16,7 +16,7 @@ chk_root
 
 DURATION=$1
 if [ $# -ne 1 ]; then
-  DURATION=5
+  DURATION=7
 fi
 
 plymouthd
