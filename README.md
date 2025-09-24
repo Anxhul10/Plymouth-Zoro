@@ -1,6 +1,12 @@
 <!--markdownlint-disable MD013-->
 <!--markdownlint-disable MD025-->
 <!--markdownlint-disable MD041-->
+## Demo Video
+[Watch the demo video](https://github.com/user-attachments/assets/dbe2b1a0-fae2-4c7c-ac44-8158c1f1186b)
+
+## Credits
+Original artwork: [One Piece Logo by Miiizi](https://pin.it/5R9bQJWi4)
+
 
 ## Installation On Ubuntu
 
