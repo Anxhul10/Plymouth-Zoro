@@ -1,4 +1,5 @@
 image = Image("/media/zoro.png");
+warning_image = Image.Text("error message from plymouth", 0.8, 0.8, 0.8, 0.8, "Fixed");
 
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
 pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
