@@ -1,4 +1,8 @@
 ## Development
+At the usr/share/plymouth/themes
+```
+sudo cp -r ~/CodeVault/github/Plymouth-Zoro .
+```
 
 1. clone this repo at /ust/share/plymouth/themes/Plymouth-Zoro
 ```
