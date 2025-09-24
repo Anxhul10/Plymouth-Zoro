@@ -9,12 +9,15 @@ on:
       - unlabeled
 
 jobs:
-  check:
+  lint:
+    name: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 21
-      - run: npm run install
-      - run: npm run markdownlint
+      - name: install 
+        run: npm run install
+      - name: run test
+        run: npm run markdownlint
