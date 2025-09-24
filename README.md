@@ -19,15 +19,21 @@ If you want to install this on < Ubuntu 16.04, change the path from /usr/share/p
 ## Development
 
 ### METHOD 1
+
 1. **clone this repo at /ust/share/plymouth/themes**
+
 ```
 sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
 ```
+
 2. **add the theme to the default.plymouth**
+
 ```
  sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120```
 ```
+
 sudo update-alternatives --config default.plymouth
+
 ```
 #### OUTPUT
 ```bash 
@@ -69,11 +75,11 @@ sudo plymouthd --no-daemon --debug
 ```bash
 sudo plymouth show-splash
 ```
+
 > [!NOTE]
 > This will take over your screen and prevent you from running other apps until Plymouth is stopped.
 > To exit, press Ctrl + Alt + F3 to switch to a virtual terminal, then run the command below.
 > And to exit virtual terminal use Ctrl + Alt + F2
-
 
 #### Terminal 2
 
@@ -83,12 +89,15 @@ When you're done, you can close Plymouth
 ```bash
 sudo plymouth quit
 ```
+
 ## METHOD 2
 
 1. **COPY PLYMOUTH TO /usr/share/plymouth/themes**
+
 ```
 sudo cp -r ~/path/to/plymouth /usr/share/plymouth/themes
 ```
+
 3. **Run the test-script** or run ``` sudo plymouthd ; sudo plymouth --show-splash ; sleep 10 ; sudo killall plymouthd ```
 
 Make the script executable and run it:
