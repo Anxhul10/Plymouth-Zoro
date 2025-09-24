@@ -1,6 +1,6 @@
 name: "lint"
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - edited
@@ -10,14 +10,13 @@ on:
 
 jobs:
   lint:
-    name: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
-          node-version: 21
-      - name: install 
-        run: npm run install
-      - name: run test
+          node-version: 20
+      - name: Install dependencies
+        run: npm install
+      - name: Run markdownlint
         run: npm run markdownlint
