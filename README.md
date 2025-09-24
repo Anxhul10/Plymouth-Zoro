@@ -1,16 +1,26 @@
+<!--markdownlint-disable MD013-->
+<!--markdownlint-disable MD025-->
+<!--markdownlint-disable MD041-->
+
 ## Installation On Ubuntu
 
 Install the theme.
 
+```bash
     sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120
+```
 
 Select the default theme.
 
+```bash
     sudo update-alternatives --config default.plymouth
+```
 
 Update the initramfs image.
 
+```bash
     sudo update-initramfs -u
+```
 
 Now reboot.
 
@@ -20,23 +30,25 @@ If you want to install this on < Ubuntu 16.04, change the path from /usr/share/p
 
 ### METHOD 1
 
-1. **clone this repo at /ust/share/plymouth/themes**
+#### 1. clone this repo at /ust/share/plymouth/themes
 
-```
-sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
-```
+  ```bash
+  sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
+  ```
 
-2. **add the theme to the default.plymouth**
+#### 2. add the theme to the default.plymouth
 
-```
- sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120```
-```
+  ```bash
+  sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120
+  ```
 
+```bash
 sudo update-alternatives --config default.plymouth
-
 ```
+
 #### OUTPUT
-```bash 
+
+```bash
 There are 4 choices for the alternative default.plymouth (providing /usr/share/plymouth/themes/default.plymouth).
 
   Selection    Path                                                                     Priority   Status
@@ -62,7 +74,7 @@ sudo update-initramfs -u -k all
 
 ##### Tab 1
 
-**Start Plymouth daemon**
+###### Start Plymouth daemon
 
 ```bash
 sudo plymouthd --no-daemon --debug
@@ -70,7 +82,7 @@ sudo plymouthd --no-daemon --debug
 
 ##### Tab 2
 
-**Show splash**
+###### Show splash
 
 ```bash
 sudo plymouth show-splash
@@ -92,13 +104,13 @@ sudo plymouth quit
 
 ## METHOD 2
 
-1. **COPY PLYMOUTH TO /usr/share/plymouth/themes**
+### 1. **COPY PLYMOUTH TO /usr/share/plymouth/themes**
 
-```
+```bash
 sudo cp -r ~/path/to/plymouth /usr/share/plymouth/themes
 ```
 
-3. **Run the test-script** or run ``` sudo plymouthd ; sudo plymouth --show-splash ; sleep 10 ; sudo killall plymouthd ```
+### 2. **Run the test-script** or run ``` sudo plymouthd ; sudo plymouth --show-splash ; sleep 10 ; sudo killall plymouthd ```
 
 Make the script executable and run it:
 
@@ -112,13 +124,13 @@ chmod +x run-plymouth-test.sh
 
 # Example
 
-1. **Change directory**
+## 1. **Change directory**
 
 ```bash
 cd /usr/share/plymouth/themes
 ```
 
-2. **Copy theme**
+## 2. **Copy theme**
 
 ```bash
 sudo cp -r ~/CodeVault/github/onePiece-plymouth .
