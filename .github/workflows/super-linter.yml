@@ -7,6 +7,9 @@ on:
     branches: [ "develop" ]
 jobs:
   run-lint:
+    permissions:
+      contents: write
+      statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
