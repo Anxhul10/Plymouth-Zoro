@@ -22,7 +22,7 @@ jobs:
       - name: Super-Linter
         uses: super-linter/super-linter@v8.1.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
           FIX_SHELL_SHFMT: true
           FIX_YAML_PRETTIER: true
       - name: Commit and push linting fixes
