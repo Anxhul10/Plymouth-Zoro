@@ -18,5 +18,6 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm install
+      - run: npm install -g markdownlint-cli
       - name: Run markdownlint
         run: npm run markdownlint
