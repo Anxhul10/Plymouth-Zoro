@@ -2,7 +2,7 @@
 
 Install the theme.
 
-    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/PlymouthTheme-Cat/PlymouthTheme-Cat.plymouth 100
+    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120
 
 Select the default theme.
 
@@ -19,31 +19,28 @@ If you want to install this on < Ubuntu 16.04, change the path from /usr/share/p
 ## Development
 
 ### METHOD 1
-1. **clone this repo at /ust/share/plymouth/themes/Plymouth-Zoro**
+1. **clone this repo at /ust/share/plymouth/themes**
 ```
-sudo git clone https://github.com/Anxhul10/Plymouth-Zoro.git /usr/share/plymouth/themes/Plymouth-Zoro
+sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
 ```
 2. **add the theme to the default.plymouth**
 ```
-sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/Plymouth-Zoro/zoro.plymouth 100
-```
-
-Verify that this theme is set as default:
+ sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120```
 ```
 sudo update-alternatives --config default.plymouth
 ```
 #### OUTPUT
 ```bash 
-There are 3 choices for the alternative default.plymouth (providing /usr/share/plymouth/themes/default.plymouth).
+There are 4 choices for the alternative default.plymouth (providing /usr/share/plymouth/themes/default.plymouth).
 
   Selection    Path                                                                     Priority   Status
 ------------------------------------------------------------
-  0            /usr/share/plymouth/themes/bgrt/bgrt.plymouth                             110       auto mode
-  1            /usr/share/plymouth/themes/bgrt/bgrt.plymouth                             110       manual mode
-* 2            /usr/share/plymouth/themes/Plymouth-Zoro/zoro.plymouth            100       manual mode
+  0           /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth   120       auto mode
+  1           /usr/share/plymouth/themes/bgrt/bgrt.plymouth                             100       manual mode
+* 2           /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth   120       manual mode
+  3           /usr/share/plymouth/themes/spinner/spinner.plymouth                       70        manual mode
 
-Press <enter> to keep the current choice[*], or type selection number: 3
-update-alternatives: using /usr/share/plymouth/themes/plymouth-test/simple-image.plymouth to provide /usr/share/plymouth/themes/default.plymouth (default.plymouth) in manual mode
+Press <enter> to keep the current choice[*], or type selection number: ^C
 
 ```
 
@@ -115,5 +112,5 @@ cd /usr/share/plymouth/themes
 2. **Copy theme**
 
 ```bash
-sudo cp -r ~/CodeVault/github/Plymouth-Zoro .
+sudo cp -r ~/CodeVault/github/onePiece-plymouth .
 ```
