@@ -10,6 +10,11 @@ Original artwork: [One Piece Logo by Miiizi](https://pin.it/5R9bQJWi4)
 
 ## Installation On Ubuntu
 
+clone this repo at /usr/share/plymouth/themes
+
+```bash
+sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git
+```
 Install the theme.
 
 ```bash
