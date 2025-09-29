@@ -1,6 +1,7 @@
 <!--markdownlint-disable MD013-->
 <!--markdownlint-disable MD025-->
 <!--markdownlint-disable MD041-->
+## Published at : [pling](https://www.pling.com/p/2321917/)
 ## Demo Video
 [Watch the demo video](https://github.com/user-attachments/assets/dbe2b1a0-fae2-4c7c-ac44-8158c1f1186b)
 
