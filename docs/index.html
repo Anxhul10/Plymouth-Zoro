@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>One Piece plymouth</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,10 +19,13 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>This is<br />
-						Massively</h1>
-						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+						<h1 style="color: white; font-family: Great Vibes">One Piece<br />
+						plymouth</h1>
+                        <b>
+                            <p style="color:  #1C1C1C">One Piece plymouth made by <a href="https://github.com/Anxhul10" style="color: #1C1C1C">@Anxhul10</a> <br />
+						    and released under <a href="https://opensource.org/license/mit" style="color: #1C1C1C">MIT license</a>.</p>
+                        </b>
+						
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -30,21 +33,19 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">One Piece</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
+							<li class="active"><a href="index.html">One Piece plymouth</a></li>
+						</ul>							
+                    
+
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://github.com/Anxhul10" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/anxhul10/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
 						</ul>
 					</nav>
 
@@ -53,161 +54,52 @@
 
 						<!-- Featured Post -->
 							<article class="post featured">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">And this is a<br />
-									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
+                                <video  width="100%" autoplay loop>
+                                <source src="videos/video.mp4" type="video/mp4">
+                                </video> 
 								</ul>
+                                <div class="container">
+                                <header>
+                                    <div>
+                                        <h1>Install <span class="inline">onePiece-plymouth</span> — helper</h1>
+                                    </div>
+                                </header>
+
+                                <div class="card" id="step-clone">
+                                    <strong>1. Clone the repo (to <code class="inline">/usr/share/plymouth/themes</code>)</strong>
+                                    <pre class="cmd"><code style="color:black;">sudo git clone https://github.com/Anxhul10/onePiece-plymouth.git /usr/share/plymouth/themes/onePiece-plymouth</code></pre>
+                                </div>
+
+                                <div class="card" id="step-alternatives">
+                                    <strong>2. Register the theme with <code class="inline">update-alternatives</code></strong>
+                                    <pre class="cmd"><code style="color:black;">sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120</code></pre>
+                                </div>
+
+                                <div class="card" id="step-select">
+                                    <strong>3. Select the default theme (interactive)</strong>
+                                    <pre class="cmd"><code style="color:black;">sudo update-alternatives --config default.plymouth</code></pre>
+                                </div>
+
+                                <div class="card" id="step-initramfs">
+                                    <strong>4. Update initramfs</strong>
+                                    <pre class="cmd"><code style="color:black;">sudo update-initramfs -u</code></pre>
+                                </div>
+
+                                <div class="card" id="step-reboot">
+                                    <strong>5. Reboot</strong>
+                                    <pre class="cmd"><code style="color:black;">sudo reboot</code></pre>
+                                </div>
+
+                                <div class="card" id="legacy">
+                                    <strong>Note for Ubuntu &lt; 16.04</strong>
+                                    <pre class="cmd"><code style="color:black;">sudo update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/onePiece-plymouth/onePiece-plymouth.plymouth 120</code></pre>
+                                </div>
+                            </div>
+
 							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
+                            
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+                    
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -226,4 +118,102 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+    <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --mono: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071027 0%, #07101a 100%);
+      color: #e6eef6;
+      padding:32px;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:20px;
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.7);
+      margin-bottom:18px;
+    }
+
+    pre.cmd{
+      margin:0;
+      background: rgba(0,0,0,0.25);
+      padding:12px;
+      border-radius:8px;
+      font-family: var(--mono);
+      font-size:13px;
+      white-space:pre-wrap;
+      word-break:break-all;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    code.inline{ color: #00008B; }
+
+    button.copy{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:8px;
+      font-family:var(--mono);
+      cursor:pointer;
+    }
+    button.copy:hover{ transform:translateY(-1px); }
+
+
+    .flex-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+
+    textarea#script{
+      width:100%;
+      min-height:220px;
+      margin-top:12px;
+      border-radius:8px;
+      background:#031021;
+      color:#daf4ff;
+      padding:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      font-family: var(--mono);
+      font-size:13px;
+      resize:vertical;
+    }
+
+    .actions{ display:flex; gap:8px; margin-top:12px; }
+    a.btn{ text-decoration:none; padding:8px 12px; border-radius:8px; background:var(--accent); color:#04232b; font-weight:600; }
+    .small{ font-size:12px; color:var(--muted); }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+    .warn{ color:#ffd6a5; font-weight:600; }
+
+    @media (max-width:640px){
+      pre.cmd{ flex-direction:column; align-items:stretch; gap:8px; }
+      header{ flex-direction:column; align-items:flex-start; gap:4px; }
+    }
+  </style>
 </html>
